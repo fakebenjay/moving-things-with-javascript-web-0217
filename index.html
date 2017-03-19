@@ -10,7 +10,52 @@
       <div id="dodger" style="bottom: 0px; left: 180px;"></div>
     </div>
     <script>
-      // your code here
+      document.addEventListener('keydown', function(e) {
+        if (e.which === 37) {
+          var leftNumbers = dodger.style.left.replace('px', '')
+          var left = parseInt(leftNumbers, 10)
+
+          if (left > 0) {
+            dodger.style.left = `${left - 1}px`
+          }
+        }
+      })
+    </script>
+    <script>
+      document.addEventListener('keydown', function(e) {
+        if (e.which === 39) {
+          var rightNumbers = dodger.style.left.replace('px', '')
+          var right = parseInt(rightNumbers, 10)
+
+          if (right < 360) {
+            dodger.style.left = `${right + 1}px`
+          }
+        }
+      })
+    </script>
+    <script>
+      document.addEventListener('keydown', function(e) {
+        if (e.which === 40) {
+          var downNumbers = dodger.style.bottom.replace('px', '')
+          var down = parseInt(downNumbers, 10)
+
+          if (down > 0) {
+            dodger.style.bottom = `${down - 1}px`
+          }
+        }
+      })
+    </script>
+    <script>
+      document.addEventListener('keydown', function(e) {
+        if (e.which === 38) {
+          var upNumbers = dodger.style.bottom.replace('px', '')
+          var up = parseInt(upNumbers, 10)
+
+          if (up < 380) {
+            dodger.style.bottom = `${up + 1}px`
+          }
+        }
+      })
     </script>
   </body>
 </html>
